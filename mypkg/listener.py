@@ -11,7 +11,7 @@ def cb(msg):
     node.get_logger().info("Listen: %d" % msg.data)
 
 def main():
-    pub = node.create_subscription(Int16, "countup", cb, 10)
+    pub = node.create_subscription(Person, "person", cb, 10)
     rclpy.spin(node)
 
 
