@@ -1,0 +1,3 @@
+[console_scripts]
+battery_monitor = mypkg.monitor:main
+warning_listener = mypkg.listener_node:main
