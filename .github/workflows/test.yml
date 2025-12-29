@@ -6,8 +6,6 @@ jobs:
     container:
       image: ros:jazzy-ros-base
 
-    strategy:
-
     steps:
       - uses: actions/checkout@v4
       - name: All test
