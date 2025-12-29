@@ -3,15 +3,14 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-      container:
-        image: ros:jazzy-ros-base
+    container:
+      image: ros:jazzy-ros-base
 
     strategy:
-      matrix:
-        python-version: ["3.11", "3.12", "3.13", "3.14"]
 
     steps:
       - uses: actions/checkout@v4
       - name: All test
-        run: chmod +x test/test.bash
-             bash -xv test/test.bash /root
+        run: |
+          chmod +x test/test.bash
+          bash -xv test/test.bash /root
