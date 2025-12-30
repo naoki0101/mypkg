@@ -8,11 +8,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          apt-get update
+          apt-get install -y rsync python3-colcon-common-extensions    
+
       - name: Prepare workspace 
         run: |
           mkdir -p /root/ros2_ws2025/src/mypkg
           rsync -av --delete ./ /root/ros2_ws2025/src/mypkg/
+      
       - name: All test
         run: |
           chmod +x /root/ros2_ws2025/src/mypkg/test/test.bash
           bash -xv /root/ros2_ws2025/src/mypkg/test/test.bash /root
+
+          
