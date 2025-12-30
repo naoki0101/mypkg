@@ -1,6 +1,6 @@
 # バッテリー監視パッケージ                                                                                                                                                                                                                                      
 
-![test](https://github.com/naoki0101/mypkg/actions/workflows/test.yml/badge.svg
+![test](https://github.com/naoki0101/mypkg/actions/workflows/test.yml/badge.svg)
 
 ROS2を用いてバッテリー残量を監視し一定残量以下で警告を出すノードと、その警告を受信するノードを実装したパッケージです。 
 
@@ -12,14 +12,32 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 ### listener_node.py（Subscriber）
 - `/battery/warning` をだし、警告をログに表示する。
 
+### ビルド方法
+
+　'''bash
+
+  cd ~/ros2_ws2025
+
+  colcon build --symlink-install
+
+  source install/setup.bash
+
+### 実行方法
+
+　バッテリー監視ノード
+　
+　ros2 run mypkg battery_monitor
+
+  警告受信ノード
+
+  ros2 run mypkg warning_listener
 
 ## 必要なソフトウェア
-　python    テスト済み： 3.11～3.14
+　-ubuntu 24.04
 
-## テスト環境
+  -ros2 Jazzy
 
-　Ubuntu 24.04
-
+  -python 3.12
 
 ## ライセンス
 
