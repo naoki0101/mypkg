@@ -14,18 +14,18 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
 ### ビルド方法
 
-  cd ~/ros2_ws2025
+   cd ~/ros2_ws2025
 
-  colcon build --symlink-install
+   colcon build --symlink-install
 
-  source install/setup.bash
+   source install/setup.bash
 
 ### 実行方法
 
 バッテリー監視ノード
 
 　
-　ros2 run mypkg battery_monitor
+ros2 run mypkg battery_monitor
 
   警告受信ノード
 
@@ -33,11 +33,11 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
 ## 必要なソフトウェア
 
-　 -ubuntu 24.04
+-ubuntu 24.04
 
-   -ros2 Jazzy
+-ros2 Jazzy
 
-   -python 3.12
+-python 3.12
 
 ## ライセンス
 
