@@ -22,7 +22,8 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
 ### 実行方法
 
-　バッテリー監視ノード
+バッテリー監視ノード
+
 　
 　ros2 run mypkg battery_monitor
 
@@ -31,7 +32,8 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
   ros2 run mypkg warning_listener
 
 ## 必要なソフトウェア
-　-ubuntu 24.04
+
+　 -ubuntu 24.04
 
    -ros2 Jazzy
 
