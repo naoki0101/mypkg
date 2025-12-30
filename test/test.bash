@@ -30,7 +30,18 @@ timeout 10 bash -c "
 
 cat /tmp/mon.log /tmp/warn.log > "$log"
 
-grep -E 'battery_monitor|Battery monitor node started|Battery monitor node started' "$log" > /dev/null
+echo "===== /tmp/mon.log ====="
+tail -n 200 /tmp/mon.log || true
+echo "===== /tmp/warn.log ====="
+tail -n 200 /tmp/warn.log || true
+echo "===== /tmp/mypkg.log ====="
+tail -n 200 "$log" || true
+
+if ! grep -Eq 'battery_monitor|Battery monitor node started|Battery monitor node started' "$log"; then
+  echo "NG: startup log not found"
+  exit 1
+fi
+
 grep -E 'Battery:' "$log" > /dev/null
 grep -E 'WARNING' "$log" > /dev/null
 
