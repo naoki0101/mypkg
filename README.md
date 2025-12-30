@@ -12,7 +12,7 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 ### listener_node.py（Subscriber）
 - `/battery/warning` をだし、警告をログに表示する。
 
-### ビルド方法
+## ビルド方法
 
    cd ~/ros2_ws2025
 
@@ -20,7 +20,7 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
    source install/setup.bash
 
-### 実行方法
+## 実行方法
 
   バッテリー監視ノード
 
@@ -32,11 +32,11 @@ ros2 run mypkg battery_monitor
 
 ## 必要なソフトウェア
 
--ubuntu 24.04
+ - ubuntu 24.04
 
--ros2 Jazzy
+ - ros2 Jazzy
 
--python 3.12
+ - python 3.12
 
 ## ライセンス
 
