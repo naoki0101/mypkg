@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 # SPDX-FileCopyrightText: 2025 Naoki Otsubo
-# SPDX-License-Identifier : BSD-3-Clauseimport rclpy
+# SPDX-License-Identifier : BSD-3-Clause
 
+import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32, String
 import subprocess
