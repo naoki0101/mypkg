@@ -20,6 +20,7 @@ jobs:
           rsync -av --delete ./ /root/ros2_ws2025/src/mypkg/
       
       - name: All test
+        shell: bash
         run: |
           source /opt/ros/jazzy/setup.bash
           chmod +x /root/ros2_ws2025/src/mypkg/test/test.bash
