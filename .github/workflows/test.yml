@@ -21,6 +21,7 @@ jobs:
       
       - name: All test
         run: |
+          source /opt/ros/jazzy/setup.bash
           chmod +x /root/ros2_ws2025/src/mypkg/test/test.bash
           bash -xv /root/ros2_ws2025/src/mypkg/test/test.bash /root
 
