@@ -39,7 +39,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             'battery_path',
-            default_value='/tmp/capacitytest',
+            default_value='/tmp/capacity_test',
             description='path to battery capacity file'
         ),    
         battery_monitor,

@@ -45,6 +45,11 @@ fi
 grep -E 'Battery:' "$log" > /dev/null
 grep -E 'WARNING' "$log" > /dev/null
 
+capfile=/tmp/capacity_test
+echo 15 > "$capfile"
+ls -l "$capfile"
+cat "$capfile"
+
 timeout 10 bash -c "
   ros2 launch mypkg battery_system.launch.py \
     warning_threshold:=20.0 \
