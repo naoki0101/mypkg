@@ -21,7 +21,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'warning_threshold': warning_threshold,
-                'batterypath': battery_path,
+                'battery_path': battery_path,
             }],    
     )
 
