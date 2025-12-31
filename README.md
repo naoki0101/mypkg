@@ -36,19 +36,19 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 　
   - デフォルト実行
 
-　 ros2 launch mypkg battery_system.launch.py
+　  ros2 launch mypkg battery_system.launch.py
 
   - しきい値を指定して実行
 
-　 ros2 launch mypkg battery_system.launch.py warning_threshold:=30.0
+　  ros2 launch mypkg battery_system.launch.py warning_threshold:=30.0
 
 ## 必要なソフトウェア
 
- - ubuntu 24.04
+  - ubuntu 24.04
 
- - ros2 Jazzy
+  - ros2 Jazzy
 
- - python 3.12
+  - python 3.12
 
 ## ライセンス
 
