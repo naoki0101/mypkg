@@ -59,21 +59,27 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 ## 参考文献
 
 [1] ロボットシステム学（講義資料）
+
     https://ryuichiueda.github.io/slides_marp/robosys2025/ 
 
 [2] takanory, “Pythonでファイルの読み書きを行う方法（openの基本）”,
-Qiita, 2018. https://qiita.com/takanory/items/8c1b3d7c4f5c2bfb8b6d
+
+    Qiita, 2018. https://qiita.com/takanory/items/8c1b3d7c4f5c2bfb8b6d
 
 [3] nishimura, “Pythonの例外処理（try-except）の基本”,
-Qiita, 2019. https://qiita.com/nishimura/items/2f3a4f0b3c2a2e7a1b3e
+
+    Qiita, 2019. https://qiita.com/nishimura/items/2f3a4f0b3c2a2e7a1b3e
 
 [4] atsushieno, “ROS2でPythonノードを作ってみる（rclpy入門）”,
-Qiita, 2022. https://qiita.com/atsushieno/items/1a7b4e1d1f9a4b6d8e92
+
+    Qiita, 2022. https://qiita.com/atsushieno/items/1a7b4e1d1f9a4b6d8e92
 
 [5] KNR109, “ROS2のTopic通信をPythonで試す”,
-Qiita, 2021. https://qiita.com/KNR109/items/8a1c0f2bfa4e92c43d1f
+
+    Qiita, 2021. https://qiita.com/KNR109/items/8a1c0f2bfa4e92c43d1f
 
 [6] matsumoto-r, “bashスクリプトの基本構文まとめ”,
-Qiita, 2017. https://qiita.com/matsumoto-r/items/9c6d64c5f5e6c6b7b0d4
+
+    Qiita, 2017. https://qiita.com/matsumoto-r/items/9c6d64c5f5e6c6b7b0d4
 
 © 2025 Naoki Otsubo
