@@ -10,7 +10,7 @@ from pathlib import Path
 class BatteryMonitor(Node):
     def __init__(self):
         super().__init__('battery_monitor')
-        self.pub_percentage = self.create_publisher(Float32, 'battery/percentge', 10)
+        self.pub_percentage = self.create_publisher(Float32, 'battery/percentage', 10)
         self.pub_warning = self.create_publisher(String, 'battery/warning', 10)
         self.declare_parameter('battery_path', '/sys/class/power_supply/BAT1/capacity')
         self.declare_parameter('warning_threshold', 20.0)
@@ -18,6 +18,7 @@ class BatteryMonitor(Node):
         self.threshold = float(self.get_parameter('warning_threshold').value)
         self.create_timer(5.0, self.timer_callback)
         self.get_logger().info('Battey monitor node started')
+        self.get_logger().info(f'battery_path={self.battery_path}, warning_threshold={self.threshold}')
 
     
     def read_battery_percentage(self):

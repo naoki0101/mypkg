@@ -58,7 +58,7 @@ echo "===== [LAUNCH] /tmp/launch.log ===== "
 tail -n 200 /tmp/launch.log || true
 
 grep -Eq 'process started|battery_monitor|warning_listener|warning listener node started' /tmp/launch.log
-glep -E 'Battery: 15\.0%' /tmp/launch.log > /dev/null
+grep -E 'Battery: 15\.0%' /tmp/launch.log > /dev/null
 grep -E 'WARNING' /tmp/launch.log > /dev/null
 
 echo "OK"
