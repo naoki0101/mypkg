@@ -11,22 +11,31 @@ class WarningListener(Node):
     def __init__(self):
         super().__init__('battery_warning_listener')
 
-        self.declare_parameter('enable_notify', False)
-        self.enable_notify = bool(self.get_parameter('enable_notify').value)
+        self.levels = [20.0, 15.0, 10.0, 5.0, 4.0, 3.0, 2.0, 1.0]
+        self.notified_levels = set()
 
-        self.create_subscription(String, 'battery/warning', self.cb, 10)
+        self.get_logger().info('Warning listener node started (LEVEL ALERT MODE)')
+        self.get_logger().info(f'levels={self.levels}')
+
+        self.sub_percentage = self.create_subscription(Float32, '/battery/warning', self.cb_percentage, 10)
+
         self.get_logger().info('warning listener started')
+    
+    def _print_colored(self, msg: str, color_code: str):
+        print(f"\033[{color_code}m{msg}\033[0m", flush=True)
 
-    def cb(self, msg: String):
-        text = msg.data
-        self.get_logger().warn(f'\n=======\n{text}\n=======')
+    def cb_percentage(self, msg: Float32):
+        p = float(msg.data)
 
-        if self.enable_notify:
-            try:
-                subprocess.run(['notify-send', 'Battery Warning', text], check=False)
-            except Exception as e:
-                self.get_logger().error(f'notify-send failed: {e}')
+        for lvl in self.levels:
+            if p <= lvl and lvl not in self.notified:
+                self.notified.add(lvl)
+                code = "1;33" if lvl >= 20.0 else "1;31"
+                self._print_colored(f"[ALART] Battery <= {lvl:.0f}% (now {p:.1f}%)", code)
 
+
+    def cb_warning(self, msg: String):
+        self._print_colored(f"[WARNING TOPIC] {msg.data}", "1;31")
 
 def main():
     rclpy.init()
