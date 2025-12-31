@@ -45,4 +45,16 @@ fi
 grep -E 'Battery:' "$log" > /dev/null
 grep -E 'WARNING' "$log" > /dev/null
 
+timeout 10 bash -c "
+  ros2 launch mypkg battery_system.launch.py \
+    warning_threshold:=20.0 \
+    battery_path:=$capfile > /tmp/launch.log 2>&1 
+" || true
+
+echo "===== [LAUNCH] /tmp/launch.log ===== "
+tail -n 200 /tmp/launch.log || true
+
+grep -Eq 'process started|battery_monitor|warning_listener|warning listener node started' /tmp/launch.log
+grep -E '\[ALERT\]' /tmp/launch.log > /dev/null
+
 echo "OK"

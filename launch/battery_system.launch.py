@@ -13,6 +13,7 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
 
     warning_threshold = LaunchConfiguration('warning_threshold')
+    battery_path = LaunchConfiguration('battery_path')
 
     battery_monitor = launch_ros.actions.Node(
             package='mypkg',
@@ -20,6 +21,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'warning_threshold': warning_threshold,
+                'batterypath': battery_path,
             }],    
     )
 
@@ -35,6 +37,11 @@ def generate_launch_description():
             default_value='20.0',
             description='warning_threshold (%)'
         ),
+        DeclareLaunchArgument(
+            'battery_path',
+            default_value='/tmp/capacitytest',
+            description='path to battery capacity file'
+        ),    
         battery_monitor,
         warning_listener
     ])
