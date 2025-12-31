@@ -26,21 +26,21 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
   - バッテリー監視ノード
 
-ros2 run mypkg battery_monitor
+   ros2 run mypkg battery_monitor
 
   - 警告受信ノード
 
-  ros2 run mypkg warning_listener
+   ros2 run mypkg warning_listener
 
 ### launchで実行
 　
-　- デフォルト実行
+  - デフォルト実行
 
-　ros2 launch mypkg battery_system.launch.py
+　 ros2 launch mypkg battery_system.launch.py
 
-　- しきい値を指定して実行
+  - しきい値を指定して実行
 
-　ros2 launch mypkg battery_system.launch.py warning_threshold:=30.0
+　 ros2 launch mypkg battery_system.launch.py warning_threshold:=30.0
 
 ## 必要なソフトウェア
 
