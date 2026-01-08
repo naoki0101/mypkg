@@ -53,7 +53,7 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
 [1] ロボットシステム学（講義資料）
 
-   [Google](https://ryuichiueda.github.io/slides_marp/robosys2025/) 
+   [Github](https://ryuichiueda.github.io/slides_marp/robosys2025/) 
 
 [2] takanory, “Pythonでファイルの読み書きを行う方法（openの基本）”,
 
