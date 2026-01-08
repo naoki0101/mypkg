@@ -55,24 +55,20 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
    https://github.com/ryuichiueda/slides_marp/blob/master/robosys2025/README.md
 
-[2] takanory, “Pythonでファイルの読み書きを行う方法（openの基本）”,
+[2] “Pythonでファイルの読み書きを行う方法（openの基本）”,
 
-   [Google](https://qiita.com/takanory/items/8c1b3d7c4f5c2bfb8b6d)
+   https://qiita.com/yasagureprog/items/69c140aecf325783fcca
 
-[3] nishimura, “Pythonの例外処理（try-except）の基本”,
+[3] “Pythonの例外処理（try-except）の基本”,
 
-   [Google](https://qiita.com/nishimura/items/2f3a4f0b3c2a2e7a1b3e)
+   https://frkz.jp/study/python/exception
 
-[4] atsushieno, “ROS2でPythonノードを作ってみる（rclpy入門）”,
+[4] “ROS2でPythonノードを作ってみる（rclpy入門）”,
 
-   [Google](https://qiita.com/atsushieno/items/1a7b4e1d1f9a4b6d8e92)
+   https://zenn.dev/mol0921/articles/f8b789d90abb35
 
-[5] KNR109, “ROS2のTopic通信をPythonで試す”,
+[5] “bashスクリプトの基本構文まとめ”,
 
-   [Google](https://qiita.com/KNR109/items/8a1c0f2bfa4e92c43d1f)
-
-[6] matsumoto-r, “bashスクリプトの基本構文まとめ”,
-
-   [Google](https://qiita.com/matsumoto-r/items/9c6d64c5f5e6c6b7b0d4)
+   https://atnettec.com/2026/01/08/what-is-the-bash-shell/
 
 © 2025 Naoki Otsubo
