@@ -32,9 +32,9 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 ### launchで実行
   - デフォルト実行
 
-   ```bash
-   ros2 launch mypkg battery_system.launch.py
-   ```
+    ```bash
+    ros2 launch mypkg battery_system.launch.py
+    ```
 
   - しきい値を指定して実行
  
@@ -50,9 +50,9 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
    ros2 topic echo /battery/percentage
    ```
      
-     出力例
+   出力例
 
-     data: 56.0
+   data: 56.0
 
 ## 必要なソフトウェア
 
