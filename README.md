@@ -26,14 +26,15 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
     起動すると以下のようなログが表示されます
 
      [battery_monitor]: Battey monitor node started
+
      [battery_monitor]: Battery: 55.0%
 
 ### launchで実行
   - デフォルト実行
 
-    ```bash
-    ros2 launch mypkg battery_system.launch.py
-    ```
+   ```bash
+   ros2 launch mypkg battery_system.launch.py
+   ```
 
   - しきい値を指定して実行
  
@@ -45,9 +46,9 @@ ROS2を用いてバッテリー残量を監視し一定残量以下で警告を�
 
    - バッテリー残量の表示
 
-    ```bash
-    ros2 topic echo /battery/percentage
-    ```
+   ```bash
+   ros2 topic echo /battery/percentage
+   ```
      
      出力例
 
